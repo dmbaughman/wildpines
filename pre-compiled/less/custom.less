@@ -1,0 +1,56 @@
+//
+// Custom Stylez
+// --------------------------------------------------
+
+#wrapper {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+#header-desktop {
+	.logo {
+		display: inline-block;
+		margin-top: 45px;
+	}
+	#nav-main {
+		padding: 58px 0;
+	}
+}
+
+.nav {
+  font-family: @serifFontFamily;
+  font-weight: 700;
+}
+
+.nav-links {
+	
+	li {
+		a {
+		background: none !important;
+			border-bottom: 3px solid transparent;
+			.border-radius(0);
+			&:hover, &:link {
+				text-decoration: none;
+			}
+			&:hover {
+				border-color: @grayLighter;
+			}
+		}				
+	} 
+
+	li.active {
+		a {
+			border-color: @grayLight;
+			color: @linkColor;
+			&:hover {
+				color: @linkColorHover;
+			}
+		}		
+	}
+
+}
+
+.lead {
+	font-family: @serifFontFamily;
+	font-weight: @headingsFontWeight;
+}
