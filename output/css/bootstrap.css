@@ -5128,7 +5128,10 @@ a.badge:hover {
 }
 .nav {
   font-family: Merriweather, Georgia, "Times New Roman", Times, serif;
+  font-size: 17.5px;
   font-weight: 700;
+  /*@headingsFontWeight;*/
+
 }
 .nav-links li a {
   background: none !important;
