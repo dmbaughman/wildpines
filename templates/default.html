@@ -1,5 +1,14 @@
 {% extends "base.html" %}
 
 {% block body %}
-<p class="alert">Nothing to see here</p>
+<div class="container-fluid">
+    <div id="page-title" class="row-fluid">
+        {# % if page.icon %}
+            <img class="pull-left" src="/img/{{ page.icon }}">
+        {% endif % #}
+        <h2>{{ page.title }}</h2>
+        <hr>
+    </div>
+    {{ page.content }}
+</div> <!-- /container -->
 {% endblock body %}

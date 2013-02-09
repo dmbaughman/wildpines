@@ -38,65 +38,121 @@
 					</span>
 	
 					<ul id="nav-main" class="nav nav-pills nav-links pull-right">
+				    
+				      
 				        <li>
 				        	<a href="/index.html">Home</a>
 				        </li>
+				      
+				    
+				      
 				        <li>
-				        	<a href="/counseling.html">Counseling</a>
+				        	<a href="/services.html">Services</a>
 				        </li>
+				      
+				    
+				      
 				        <li>
 				        	<a href="/about.html">About</a>
 				        </li>
+				      
+				    
+				      
+				        <li>
+				        	<a href="/forms.html">Forms</a>
+				        </li>
+				      
+				    
+				      
 				        <li class="active">
 				        	<a href="/contact.html">Contact</a>
 				        </li>
+				      
+				    
 					</ul>	   
 			</div><!--/ #header-desktop -->
 
 			<div id="header-mobile" class="clearfix visible-phone">
 				<div id="brand">
 					<a href="/" title="Wild Pines Home">
-			    		<span class="logo">Wild Pines Counseling</span>
+			    		<span class="logo centered">
+							<img src="/img/fake-logo-mobile.png" alt="Wild Pines Logo">
+			    		</span>
 					</a>
 				</div>
 				<ul class="nav nav-pills nav-links">
+			    
+			      
 			        <li>
 			        	<a href="/index.html">Home</a>
-			        </li>
+			        </li>	      
+			    
+			      
 			        <li>
-			        	<a href="/counseling.html">Counseling</a>
-			        </li>
+			        	<a href="/services.html">Services</a>
+			        </li>	      
+			    
+			      
 			        <li>
 			        	<a href="/about.html">About</a>
-			        </li>
+			        </li>	      
+			    
+			      
+			        <li>
+			        	<a href="/forms.html">Forms</a>
+			        </li>	      
+			    
+			      
 			        <li class="active">
 			        	<a href="/contact.html">Contact</a>
 			        </li>
+			      
+			    
 				</ul>	 
 			</div><!--/ #header-mobile -->
 
-
-
-			
 			<div id="main">
 			
 <div class="container-fluid">
-	<h1>Contact</h1>
-</div> <!-- /container-fluid -->
+    <div id="page-title" class="row-fluid">
+        
+        <h2>Contact</h2>
+        <hr>
+    </div>
+    <p><a href="#contact-modal" class="modal-btn" data-toggle="modal">Contact Me by Email</a>
+<div id="contact-modal" class="modal hide fade">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Verification Required</h3>
+    </div>
+    <div class="modal-body">
+        <iframe src="http://www.google.com/recaptcha/mailhide/d?k=014eQDnwdfhsEJ49hfCDCe8A==&c=_-SjAmE03r1vC9n8iZ45wfpBKMk_MS7uX4j_wA-6iiY=" style="width:99%;min-height:350px;overflow:hidden;"></iframe>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-small" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+</div></p>
+</div> <!-- /container -->
 
 			</div> <!--/ #main -->
 			
 			
 			<div id="footer">
-			    <p></p>
+			    <p>&copy; 2013 Wild Pines Counseling.  All Rights Reserved.</p>
 			</div>
 		</div> <!--/ #wrapper -->
 		
 		<!-- Le javascript
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="/js/scripts-ck.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
 		
-		
+<script>
+    $('#contact-modal').modal({
+        show: false
+    });
+</script>
+
 	</body>
 </html>

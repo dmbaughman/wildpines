@@ -38,43 +38,42 @@
 					</span>
 	
 					<ul id="nav-main" class="nav nav-pills nav-links pull-right">
-				    {%- for nav in site.tags['_nav']|sort(attribute='nav_weight') %}
-				      {%- if nav.url == page.url %}
+				    {% for nav in site.tags['_nav']|sort(attribute='nav_weight') %}
+				      {% if nav.url == page.url %}
 				        <li class="active">
 				        	<a href="{{ nav.url }}">{{ nav.title }}</a>
 				        </li>
-				      {%- else %}
+				      {% else %}
 				        <li>
 				        	<a href="{{ nav.url }}">{{ nav.title }}</a>
 				        </li>
-				      {%- endif %}
-				    {%- endfor %}
+				      {% endif %}
+				    {% endfor %}
 					</ul>	   
 			</div><!--/ #header-desktop -->
 
 			<div id="header-mobile" class="clearfix visible-phone">
 				<div id="brand">
 					<a href="/" title="Wild Pines Home">
-			    		<span class="logo">Wild Pines Counseling</span>
+			    		<span class="logo centered">
+							<img src="/img/fake-logo-mobile.png" alt="Wild Pines Logo">
+			    		</span>
 					</a>
 				</div>
 				<ul class="nav nav-pills nav-links">
-			    {%- for nav in site.tags['_nav']|sort(attribute='nav_weight') %}
-			      {%- if nav.url == page.url %}
+			    {% for nav in site.tags['_nav']|sort(attribute='nav_weight') %}
+			      {% if nav.url == page.url %}
 			        <li class="active">
 			        	<a href="{{ nav.url }}">{{ nav.title }}</a>
 			        </li>
-			      {%- else %}
+			      {% else %}
 			        <li>
 			        	<a href="{{ nav.url }}">{{ nav.title }}</a>
-			        </li>	      {%- endif %}
-			    {%- endfor %}
+			        </li>	      {% endif %}
+			    {% endfor %}
 				</ul>	 
 			</div><!--/ #header-mobile -->
 
-
-
-			
 			<div id="main">
 			{% block body %}
 			{% endblock body %}
@@ -82,14 +81,15 @@
 			
 			
 			<div id="footer">
-			    <p></p>
+			    <p>&copy; {{ site.date.year }} Wild Pines Counseling.  All Rights Reserved.</p>
 			</div>
 		</div> <!--/ #wrapper -->
 		
 		<!-- Le javascript
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="/js/scripts-ck.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
 		{% block bottom %}
 		{% endblock bottom %}
 	</body>

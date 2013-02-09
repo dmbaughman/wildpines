@@ -1,7 +1,10 @@
-{% extends "base.html" %}
+{% extends "default.html" %}
 
-{% block body %}
-<div class="container-fluid">
-	<h1>Contact</h1>
-</div> <!-- /container-fluid -->
-{% endblock body %}
+
+{% block bottom %}
+<script>
+    $('#contact-modal').modal({
+        show: false
+    });
+</script>
+{% endblock bottom %}

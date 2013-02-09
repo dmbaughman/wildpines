@@ -22,13 +22,21 @@
 // -------------------------
 @blue:                  #049cdb;
 @blueDark:              #0064cd;
-@green:                 #46a546;
+//@green:                 #46a546;
 @red:                   #9d261d;
 @yellow:                #ffc40d;
 @orange:                #f89406;
 @pink:                  #c3325f;
 @purple:                #7a43b6;
 
+// Custom colors
+// -------------------------
+@beige:                 #f2f0e0;
+@brown:                 #3C4228;
+@green:                 #407C2B;
+@greenLight:            #B3C989;
+@greenSage:             #7B9163;
+@tan:                   #8D9467;
 
 // Scaffolding
 // -------------------------
@@ -38,8 +46,8 @@
 
 // Links
 // -------------------------
-@linkColor:             #08c;
-@linkColorHover:        darken(@linkColor, 15%);
+@linkColor:             @green;
+@linkColorHover:        darken(@linkColor, 10%);
 
 
 // Typography
@@ -54,8 +62,8 @@
 @altFontFamily:         @serifFontFamily;
 
 @headingsFontFamily:    @serifFontFamily; // empty to use BS default, @baseFontFamily
-@headingsFontWeight:    300;    // instead of browser default, bold
-@headingsColor:         inherit; // empty to use BS default, @textColor
+@headingsFontWeight:    700;    // instead of browser default, bold
+@headingsColor:         @greenSage; // empty to use BS default, @textColor
 
 
 // Component sizing

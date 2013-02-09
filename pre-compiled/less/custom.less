@@ -2,25 +2,47 @@
 // Custom Stylez
 // --------------------------------------------------
 
-#wrapper {
-	max-width: 960px;
-	margin: 0 auto;
+/* ************************
+	Base Layout
+************************ */
+
+body {
+	background: darken(@brown,5%);
+	#wrapper {
+		background: url(../img/bg-noise.png) repeat;
+		.box-shadow(0px 0px 10px darken(@brown, 65%));
+		border-color: @green;
+		//.border-radius(10px);
+		margin: 0 auto;
+		max-width: 960px;
+		min-height: 100%;
+		padding: 0 20px 10px;
+
+		#main {
+			padding-bottom: 60px;
+		}
+
+	}
 }
+
+/* ************************
+	Header & Navigation
+************************ */
 
 #header-desktop {
 	.logo {
 		display: inline-block;
-		margin-top: 45px;
+		margin-top: 25px;
 	}
 	#nav-main {
-		padding: 58px 0;
+		padding: 38px 0;
 	}
 }
 
 .nav {
   font-family: @serifFontFamily;
   font-size: @fontSizeLarge;
-  font-weight: 700;/*@headingsFontWeight;*/
+  font-weight: inherit;
 }
 
 .nav-links {
@@ -34,14 +56,14 @@
 				text-decoration: none;
 			}
 			&:hover {
-				border-color: @grayLighter;
+				border-color: lighten(@greenLight, 15%);
 			}
 		}				
 	} 
 
 	li.active {
 		a {
-			border-color: @grayLight;
+			border-color: @greenLight;
 			color: @linkColor;
 			&:hover {
 				color: @linkColorHover;
@@ -51,7 +73,79 @@
 
 }
 
+#page-title {
+	img {
+		display: inline-block;
+		margin: 10px 20px 10px 0;
+	}
+}
+
+/* ************************
+	Footer
+************************ */
+#footer {
+	color: @tan;
+	font-size: @fontSizeSmall;
+}
+/* ************************
+	Homepage Stuffs
+************************ */
+
+#hero {
+	background: transparent url('../img/pine-forest.jpg') no-repeat;
+	background-size:cover;
+	color: @greenLight;
+	overflow: hidden;
+	.hero-text {
+		background: @brown;
+		.border-radius(10px);
+		opacity: .9;
+		margin: 80px 40px;
+		padding: 20px;
+		p {
+			line-height: @baseLineHeight * 1.5;
+		}
+		.lead {
+			color: @white;
+			font-family: @serifFontFamily;
+			font-size: @baseFontSize * 1.1;
+			font-weight: inherit;
+		}
+		hr {
+			border-color: darken(@tan, 25%);
+		}
+	}
+
+}
+
+#site-sections {
+	margin-top: 60px;
+	text-align: center;
+	.span3 {
+		a {
+			width: 100%;
+			text-decoration: none;
+		}
+		h4 {
+			padding-top: 10px;
+		}
+	}
+}
+
+hr {
+	border-color: darken(@beige, 15%);
+}
+
 .lead {
-	font-family: @serifFontFamily;
-	font-weight: @headingsFontWeight;
+	color: @brown;
+}
+
+.img-shadow {
+	.box-shadow(0 0 1px darken(@brown,25%));	
+}
+
+.center {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
 }
