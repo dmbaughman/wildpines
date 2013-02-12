@@ -30,14 +30,20 @@
 	
 	<body>
 		<div id="wrapper">
-			<div id="header-desktop" class="clearfix hidden-phone container-fluid">
-					<span id="brand">
-						<a href="/" title="Wild Pines Home">
-				    		<span class="logo"><img src="/img/fake-logo.png" alt="Wild Pines Logo"></span>
-						</a>
-					</span>
-	
-					<ul id="nav-main" class="nav nav-pills nav-links pull-right">
+			<div id="header" class="clearfix container-fluid">
+				<span id="brand">
+					<a href="/" title="Wild Pines Home">
+			    		<span class="logo"><img src="/img/fake-logo.png" alt="Wild Pines Logo"></span>
+					</a>
+				</span>
+				<button type="button" id="nav-toggle" class="btn btn-primary btn-navbar hidden-desktop pull-right" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>	
+				<!-- Large screen navigation -->				
+				<div id="nav-desktop" class="visible-desktop pull-right">
+					<ul id="nav-main" class="nav nav-pills nav-links">
 				    
 				      
 				        <li>
@@ -69,53 +75,50 @@
 				        </li>
 				      
 				    
-					</ul>	   
-			</div><!--/ #header-desktop -->
-
-			<div id="header-mobile" class="clearfix visible-phone">
-				<div id="brand">
-					<a href="/" title="Wild Pines Home">
-			    		<span class="logo centered">
-							<img src="/img/fake-logo-mobile.png" alt="Wild Pines Logo">
-			    		</span>
-					</a>
-				</div>
-				<ul class="nav nav-pills nav-links">
-			    
-			      
-			        <li>
-			        	<a href="/index.html">Home</a>
-			        </li>	      
-			    
-			      
-			        <li>
-			        	<a href="/services.html">Services</a>
-			        </li>	      
-			    
-			      
-			        <li>
-			        	<a href="/about.html">About</a>
-			        </li>	      
-			    
-			      
-			        <li>
-			        	<a href="/forms.html">Forms</a>
-			        </li>	      
-			    
-			      
-			        <li class="active">
-			        	<a href="/contact.html">Contact</a>
-			        </li>
-			      
-			    
-				</ul>	 
-			</div><!--/ #header-mobile -->
+					</ul>	
+				</div>   
+				<!-- Mobile and Tablet navigation -->
+				<div id="nav-mobile" class="hidden-desktop nav-collapse collapse">
+					<ul id="nav-main" class="nav nav-pills nav-links well">
+				    
+				      
+				        <li>
+				        	<a href="/index.html">Home</a>
+				        </li>
+				      
+				    
+				      
+				        <li>
+				        	<a href="/services.html">Services</a>
+				        </li>
+				      
+				    
+				      
+				        <li>
+				        	<a href="/about.html">About</a>
+				        </li>
+				      
+				    
+				      
+				        <li>
+				        	<a href="/forms.html">Forms</a>
+				        </li>
+				      
+				    
+				      
+				        <li class="active">
+				        	<a href="/contact.html">Contact</a>
+				        </li>
+				      
+				    
+					</ul>	
+				</div>   
+			</div><!--/ #header -->
 
 			<div id="main">
 			
 <div class="container-fluid">
     <div id="page-title" class="row-fluid">
-        
         <h2>Contact</h2>
         <hr>
     </div>
