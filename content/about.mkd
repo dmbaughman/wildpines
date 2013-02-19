@@ -15,6 +15,8 @@ icon: 'tent-32.png'
             <div class="span6">            
                 <p>I have always been passionate about working with youth and fully believe in the healing nature of a wilderness experience.  I find that there is something inexplicable and fulfilling about interacting with nature.</p>
                 <p>Backpacking is a passion of mine, and I began backpacking at the age of five.  One of my earliest memories is of celebrating my 5th birthday on a backpacking trip with my family.  I remember waking up to the sound of birds chirping and the sight of a few small balloons tied to the tent that my mother had packed in, just for my birthday.</p>
+                <br>
+                <br>
             </div>
         </div>
     </div>    
@@ -23,7 +25,7 @@ icon: 'tent-32.png'
 <br>
 <br>
 <div class="row-fluid">
-    <img class="span4 img-shadow" src="/img/gryphon.jpg" alt="Portrait of Annie">
+    <img class="span4 img-shadow hidden-phone" src="/img/gryphon.jpg" alt="Portrait of Annie">
     <div class="span8">
         <p class="lead">My unique approach to counseling helps youth connect with themselves as they learn to connect with nature.</p>
         <div class="row-fluid">

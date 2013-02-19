@@ -5,15 +5,16 @@ nav_weight: 2
 icon: 'tree-32.png'
 ---
 <div class="row-fluid">
-    <div class="span4">
+    <div class="span5 hidden-phone">
+        <img class="img-shadow" src="/img/trail-hikers.jpg" alt="Group of hikers on a trail at mid-day">
+    </div>
+    <div class="span4 offset1">
         <h4>Counseling</h4>
         <p>I specialize in adolescent emotional and behavioral counseling.  I have an eclectic theoretical orientation based on solution focused, person centered, and cognitive behavioral therapies.  My background in experiential education and adventure based therapy also influences my counseling.</p>
-    </div>
-    <div class="span4">
+        <br>
         <h4>Custody Supervised Visitation</h4>
         <p>During custody disputes, sometimes the court orders a third party to supervise visit between a non custodial parent and their children.   I offer supervised visitation services on as needed basis.</p>
-    </div>    
-    <div class="span4">
+        <br>
         <h4>Custody Case Management</h4>
         <p>I provide custody case management services to help facilitate communication and the implementation of parenting plans.</p>
     </div>

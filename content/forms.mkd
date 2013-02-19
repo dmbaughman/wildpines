@@ -6,29 +6,31 @@ icon: 'form-32.png'
 ---
 <div class="row-fluid">
     <div class="span4">
-        <h5>Case Management Client Intake</h5>
-    </div>
-    <div class="span4">
-        <h5>Orientation to Custody Case Management Services</h5>
-    </div>
-    <div class="span4">
-        <h5>Custody Case Management Release of Information</h5>
-    </div>        
-</div>
-<div class="row-fluid">
-    <div class="span4">
+        <h5>Case Management Client Intake</h5> 
+        <br>   
+        <br>    
         <a href="/forms/case-management-client-intake-sheet-typable.pdf" target="_blank">
             <img class="img-shadow" src="/img/case-management-client-intake-form.png" alt="Picture of the case management client intake form">
         </a>
+        <br>
+        <br>
     </div>
     <div class="span4">
+        <h5>Orientation to Custody Case Management Services</h5>  
+        <br>      
         <a href="/forms/orientation-to-custody-case-management-services.pdf" target="_blank">
             <img class="img-shadow" src="/img/oreintation-to-case-management-services.png" alt="Picture of the case management client intake form">
         </a>
+        <br>
+        <br>
     </div>
     <div class="span4">
+        <h5>Custody Case Management Release of Information</h5>
+        <br>        
         <a href="/forms/custody-case-management-release-of-information.pdf" target="_blank">
             <img class="img-shadow" src="/img/custody-case-management-release-of-information.png" alt="Picture of the case management client intake form">
         </a>
+        <br>
+        <br>
     </div>        
 </div>

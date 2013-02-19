@@ -1,20 +1,57 @@
 title: Contact
 url: /contact.html
-type: contact
 tags: [_nav]
 nav_weight: 5
 icon: 'email-32.png'
 ---
-<a href="#contact-modal" class="modal-btn" data-toggle="modal">Contact Me by Email</a>
-<div id="contact-modal" class="modal hide fade">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h3>Verification Required</h3>
+<div class="row-fluid">
+    <div class="span5 hidden-phone">
+        <img class="img-shadow" src="/img/trail-dog.jpg" alt="Black dog on a forest trail">
     </div>
-    <div class="modal-body">
-        <iframe src="http://www.google.com/recaptcha/mailhide/d?k=014eQDnwdfhsEJ49hfCDCe8A==&c=_-SjAmE03r1vC9n8iZ45wfpBKMk_MS7uX4j_wA-6iiY=" style="width:99%;min-height:350px;overflow:hidden;"></iframe>
-    </div>
-    <div class="modal-footer">
-        <button class="btn btn-small" data-dismiss="modal" aria-hidden="true">Close</button>
-    </div>
+    <div class="span4 offset1">
+        <h4>Email</h4>
+        <p>Send me an email to get more information about my services, or to go ahead and schedule an appointment.</p>
+        <script type="text/javascript">
+            //<![CDATA[
+            <!--
+            var x="function f(x){var i,o=\"\",l=x.length;for(i=l-1;i>=0;i--) {try{o+=x.c" +
+            "harAt(i);}catch(e){}}return o;}f(\")\\\"function f(x,y){var i,o=\\\"\\\\\\\""+
+            "\\\\,l=x.length;for(i=0;i<l;i++){y%=127;o+=String.fromCharCode(x.charCodeAt" +
+            "(i)^(y++));}return o;}f(\\\"\\\\em`qhci|'}yeykc~90/u5~e}\\\\\\\\177'G>p\\\\" +
+            "\\\\177vLUM\\\\\\\\031EKHNMi]B@I^F^TAP[@XD]USU[\\\\\\\\023]P-~16&/#$<t\\\\\\"+
+            "\\t$\\\\\\\\\\\"\\\\9/,$q4!;8v\\\\\\\\00015>{\\\\\\\\01440:\\\\\\\\023A!\\\\"+
+            "\\\\014\\\\\\\\021\\\\\\\\013\\\\\\\\025\\\\\\\\002\\\\\\\\004\\\\\\\\000\\" +
+            "\\\\\\004\\\\\\\\014L:\\\\\\\\013\\\\\\\\r\\\\\\\\003\\\\\\\\030\\\\\\\\006" +
+            "\\\\\\\\026(WV\\\\\\\\003\\\\\\\\021\\\\\\\\r\\\\\\\\026\\\\\\\\036A!\\\\\\" +
+            "\\\\\\\\\\\\\\\\\\\\\\\\\\#<bjkobH~cgh}gaubq|a{ertpt|2~qr\\\\\\\\034\\\\\\\\"+
+            "016C\\\\\\\\035\\\\\\\\006\\\\\\\\014\\\\\\\\035\\\\\\\\027\\\\\\\\023\\\"\\"+
+            "\\,1)\\\"(f};)lo,0(rtsbus.o nruter};)i(tArahc.x=+o{)--i;0=>i;1-l=i(rof}}{)e" +
+            "(hctac};l=+l;x=+x{yrt{)94=!)31/l(tAedoCrahc.x(elihw;lo=l,htgnel.x=lo,\\\"\\" +
+            "\"=o,i rav{)x(f noitcnuf\")"                                                 ;
+            while(x=eval(x));
+            //-->
+            //]]>
+        </script>
+        <br>
+        <br>
+        <h4>Phone</h4>
+        <p>If I don't answer immediately, please leave a message with your contact information so I can return your call.</p>
+        <script type="text/javascript">
+            //<![CDATA[
+            <!--
+            var x="function f(x){var i,o=\"\",ol=x.length,l=ol;while(x.charCodeAt(l/13)!" +
+            "=71){try{x+=x;l+=l;}catch(e){}}for(i=l-1;i>=0;i--){o+=x.charAt(i);}return o" +
+            ".substr(0,ol);}f(\")46,\\\"?39(\\\"\\\\@430\\\\SGLHIF[@MF_H@ZPO0][XYJS\\\\\\"+
+            "\\QN[QUe28(y600\\\\d>2$=t2nsx!\\\"\\\\(8\\\"\\\\8>f3( )6!.$\\\"(f};o nruter" +
+            "};))++y(^)i(tAedoCrahc.x(edoCrahCmorf.gnirtS=+o;721=%y;2=*y))y+46(>i(fi{)++" +
+            "i;l<i;0=i(rof;htgnel.x=l,\\\"\\\"=o,i rav{)y,x(f noitcnuf\")"                ;
+            while(x=eval(x));
+            //-->
+            //]]>
+        </script>
+        <br>
+        <br>
+        <h4>Service Area</h4>
+        <p>I primarily serve the greater Seattle area, but don't let that discourage you if you live in another region.  I am open to considering new clients from other areas, so let's talk!</p>
+    </div>   
 </div>
