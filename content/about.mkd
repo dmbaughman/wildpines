@@ -53,7 +53,7 @@ icon: 'tent-32.png'
     </div>
     <div class="span6">
         <h5>Challenge Course Facilitator, level 2</h5>
-        <p>Issued by the Accommodation for Challenge Course Technology.</p>
+        <p>Issued by the Association for Challenge Course Technology.</p>
         <br>
         <h5>Mental Health Counselor, Associate</h5>
         <p>Currently under supervision by a fully licensed mental health professional, full Mental Health Counselor license is pending with the state.</p>
