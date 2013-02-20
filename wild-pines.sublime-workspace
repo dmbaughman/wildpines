@@ -15,7 +15,7 @@
 			"file": "templates/base.html",
 			"settings":
 			{
-				"buffer_size": 3195,
+				"buffer_size": 3646,
 				"line_ending": "Unix"
 			}
 		},
@@ -23,7 +23,7 @@
 			"file": "templates/home.html",
 			"settings":
 			{
-				"buffer_size": 1762,
+				"buffer_size": 1701,
 				"line_ending": "Unix"
 			}
 		},
@@ -39,7 +39,7 @@
 			"file": "content/about.mkd",
 			"settings":
 			{
-				"buffer_size": 2884,
+				"buffer_size": 2939,
 				"line_ending": "Unix"
 			}
 		},
@@ -47,15 +47,7 @@
 			"file": "content/forms.mkd",
 			"settings":
 			{
-				"buffer_size": 1306,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "templates/contact.html",
-			"settings":
-			{
-				"buffer_size": 150,
+				"buffer_size": 1316,
 				"line_ending": "Unix"
 			}
 		},
@@ -63,15 +55,12 @@
 			"file": "content/services.mkd",
 			"settings":
 			{
-				"buffer_size": 991,
+				"buffer_size": 1104,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "//\n// Navbars (Redux)\n// --------------------------------------------------\n\n\n// COMMON STYLES\n// -------------\n\n// Base class and wrapper\n.navbar {\n  overflow: visible;\n  margin-bottom: @baseLineHeight;\n\n  // Fix for IE7's bad z-indexing so dropdowns don't appear below content that follows the navbar\n  *position: relative;\n  *z-index: 2;\n}\n\n// Inner for background effects\n// Gradient is applied to its own element because overflow visible is not honored by IE when filter is present\n.navbar-inner {\n  min-height: @navbarHeight;\n  padding-left:  20px;\n  padding-right: 20px;\n  #gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);\n  border: 1px solid @navbarBorder;\n  .border-radius(@baseBorderRadius);\n  .box-shadow(0 1px 4px rgba(0,0,0,.065));\n\n  // Prevent floats from breaking the navbar\n  .clearfix();\n}\n\n// Set width to auto for default container\n// We then reset it for fixed navbars in the #gridSystem mixin\n.navbar .container {\n  width: auto;\n}\n\n// Override the default collapsed state\n.nav-collapse.collapse {\n  height: auto;\n  overflow: visible;\n}\n\n\n// Brand: website or project name\n// -------------------------\n.navbar .brand {\n  float: left;\n  display: block;\n  // Vertically center the text given @navbarHeight\n  padding: ((@navbarHeight - @baseLineHeight) / 2) 20px ((@navbarHeight - @baseLineHeight) / 2);\n  margin-left: -20px; // negative indent to left-align the text down the page\n  font-size: 20px;\n  font-weight: 200;\n  color: @navbarBrandColor;\n  text-shadow: 0 1px 0 @navbarBackgroundHighlight;\n  &:hover {\n    text-decoration: none;\n  }\n}\n\n// Plain text in topbar\n// -------------------------\n.navbar-text {\n  margin-bottom: 0;\n  line-height: @navbarHeight;\n  color: @navbarText;\n}\n\n// Janky solution for now to account for links outside the .nav\n// -------------------------\n.navbar-link {\n  color: @navbarLinkColor;\n  &:hover {\n    color: @navbarLinkColorHover;\n  }\n}\n\n// Dividers in navbar\n// -------------------------\n.navbar .divider-vertical {\n  height: @navbarHeight;\n  margin: 0 9px;\n  border-left: 1px solid @navbarBackground;\n  border-right: 1px solid @navbarBackgroundHighlight;\n}\n\n// Buttons in navbar\n// -------------------------\n.navbar .btn,\n.navbar .btn-group {\n  .navbarVerticalAlign(30px); // Vertically center in navbar\n}\n.navbar .btn-group .btn,\n.navbar .input-prepend .btn,\n.navbar .input-append .btn {\n  margin-top: 0; // then undo the margin here so we don't accidentally double it\n}\n\n// Navbar forms\n// -------------------------\n.navbar-form {\n  margin-bottom: 0; // remove default bottom margin\n  .clearfix();\n  input,\n  select,\n  .radio,\n  .checkbox {\n    .navbarVerticalAlign(30px); // Vertically center in navbar\n  }\n  input,\n  select,\n  .btn {\n    display: inline-block;\n    margin-bottom: 0;\n  }\n  input[type=\"image\"],\n  input[type=\"checkbox\"],\n  input[type=\"radio\"] {\n    margin-top: 3px;\n  }\n  .input-append,\n  .input-prepend {\n    margin-top: 5px;\n    white-space: nowrap; // preven two  items from separating within a .navbar-form that has .pull-left\n    input {\n      margin-top: 0; // remove the margin on top since it's on the parent\n    }\n  }\n}\n\n// Navbar search\n// -------------------------\n.navbar-search {\n  position: relative;\n  float: left;\n  .navbarVerticalAlign(30px); // Vertically center in navbar\n  margin-bottom: 0;\n  .search-query {\n    margin-bottom: 0;\n    padding: 4px 14px;\n    #font > .sans-serif(13px, normal, 1);\n    .border-radius(15px); // redeclare because of specificity of the type attribute\n  }\n}\n\n\n\n// Static navbar\n// -------------------------\n\n.navbar-static-top {\n  position: static;\n  margin-bottom: 0; // remove 18px margin for default navbar\n  .navbar-inner {\n    .border-radius(0);\n  }\n}\n\n\n\n// Fixed navbar\n// -------------------------\n\n// Shared (top/bottom) styles\n.navbar-fixed-top,\n.navbar-fixed-bottom {\n  position: fixed;\n  right: 0;\n  left: 0;\n  z-index: @zindexFixedNavbar;\n  margin-bottom: 0; // remove 18px margin for default navbar\n}\n.navbar-fixed-top .navbar-inner,\n.navbar-static-top .navbar-inner {\n  border-width: 0 0 1px;\n}\n.navbar-fixed-bottom .navbar-inner {\n  border-width: 1px 0 0;\n}\n.navbar-fixed-top .navbar-inner,\n.navbar-fixed-bottom .navbar-inner {\n  padding-left:  0;\n  padding-right: 0;\n  .border-radius(0);\n}\n\n// Reset container width\n// Required here as we reset the width earlier on and the grid mixins don't override early enough\n.navbar-static-top .container,\n.navbar-fixed-top .container,\n.navbar-fixed-bottom .container {\n  #grid > .core > .span(@gridColumns);\n}\n\n// Fixed to top\n.navbar-fixed-top {\n  top: 0;\n}\n.navbar-fixed-top,\n.navbar-static-top {\n  .navbar-inner {\n    .box-shadow(~\"0 1px 10px rgba(0,0,0,.1)\");\n  }\n}\n\n// Fixed to bottom\n.navbar-fixed-bottom {\n  bottom: 0;\n  .navbar-inner {\n    .box-shadow(~\"0 -1px 10px rgba(0,0,0,.1)\");\n  }\n}\n\n\n\n// NAVIGATION\n// ----------\n\n.navbar .nav {\n  position: relative;\n  left: 0;\n  display: block;\n  float: left;\n  margin: 0 10px 0 0;\n}\n.navbar .nav.pull-right {\n  float: right; // redeclare due to specificity\n  margin-right: 0; // remove margin on float right nav\n}\n.navbar .nav > li {\n  float: left;\n}\n\n// Links\n.navbar .nav > li > a {\n  float: none;\n  // Vertically center the text given @navbarHeight\n  padding: ((@navbarHeight - @baseLineHeight) / 2) 15px ((@navbarHeight - @baseLineHeight) / 2);\n  color: @navbarLinkColor;\n  text-decoration: none;\n  text-shadow: 0 1px 0 @navbarBackgroundHighlight;\n}\n.navbar .nav .dropdown-toggle .caret {\n  margin-top: 8px;\n\n}\n\n// Hover\n.navbar .nav > li > a:focus,\n.navbar .nav > li > a:hover {\n  background-color: @navbarLinkBackgroundHover; // \"transparent\" is default to differentiate :hover from .active\n  color: @navbarLinkColorHover;\n  text-decoration: none;\n}\n\n// Active nav items\n.navbar .nav > .active > a,\n.navbar .nav > .active > a:hover,\n.navbar .nav > .active > a:focus {\n  color: @navbarLinkColorActive;\n  text-decoration: none;\n  background-color: @navbarLinkBackgroundActive;\n  .box-shadow(inset 0 3px 8px rgba(0,0,0,.125));\n}\n\n// Navbar button for toggling navbar items in responsive layouts\n// These definitions need to come after '.navbar .btn'\n.navbar .btn-navbar {\n  display: none;\n  float: right;\n  padding: 7px 10px;\n  margin-left: 5px;\n  margin-right: 5px;\n  .buttonBackground(darken(@navbarBackgroundHighlight, 5%), darken(@navbarBackground, 5%));\n  .box-shadow(~\"inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075)\");\n}\n.navbar .btn-navbar .icon-bar {\n  display: block;\n  width: 18px;\n  height: 2px;\n  background-color: #f5f5f5;\n  .border-radius(1px);\n  .box-shadow(0 1px 0 rgba(0,0,0,.25));\n}\n.btn-navbar .icon-bar + .icon-bar {\n  margin-top: 3px;\n}\n\n\n\n// Dropdown menus\n// --------------\n\n// Menu position and menu carets\n.navbar .nav > li > .dropdown-menu {\n  &:before {\n    content: '';\n    display: inline-block;\n    border-left:   7px solid transparent;\n    border-right:  7px solid transparent;\n    border-bottom: 7px solid #ccc;\n    border-bottom-color: @dropdownBorder;\n    position: absolute;\n    top: -7px;\n    left: 9px;\n  }\n  &:after {\n    content: '';\n    display: inline-block;\n    border-left:   6px solid transparent;\n    border-right:  6px solid transparent;\n    border-bottom: 6px solid @dropdownBackground;\n    position: absolute;\n    top: -6px;\n    left: 10px;\n  }\n}\n// Menu position and menu caret support for dropups via extra dropup class\n.navbar-fixed-bottom .nav > li > .dropdown-menu {\n  &:before {\n    border-top: 7px solid #ccc;\n    border-top-color: @dropdownBorder;\n    border-bottom: 0;\n    bottom: -7px;\n    top: auto;\n  }\n  &:after {\n    border-top: 6px solid @dropdownBackground;\n    border-bottom: 0;\n    bottom: -6px;\n    top: auto;\n  }\n}\n\n// Caret should match text color on hover\n.navbar .nav li.dropdown > a:hover .caret {\n  border-top-color: @navbarLinkColorActive;\n  border-bottom-color: @navbarLinkColorActive;\n}\n\n// Remove background color from open dropdown\n.navbar .nav li.dropdown.open > .dropdown-toggle,\n.navbar .nav li.dropdown.active > .dropdown-toggle,\n.navbar .nav li.dropdown.open.active > .dropdown-toggle {\n  background-color: @navbarLinkBackgroundActive;\n  color: @navbarLinkColorActive;\n}\n.navbar .nav li.dropdown > .dropdown-toggle .caret {\n  border-top-color: @navbarLinkColor;\n  border-bottom-color: @navbarLinkColor;\n}\n.navbar .nav li.dropdown.open > .dropdown-toggle .caret,\n.navbar .nav li.dropdown.active > .dropdown-toggle .caret,\n.navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {\n  border-top-color: @navbarLinkColorActive;\n  border-bottom-color: @navbarLinkColorActive;\n}\n\n// Right aligned menus need alt position\n.navbar .pull-right > li > .dropdown-menu,\n.navbar .nav > li > .dropdown-menu.pull-right {\n  left: auto;\n  right: 0;\n  &:before {\n    left: auto;\n    right: 12px;\n  }\n  &:after {\n    left: auto;\n    right: 13px;\n  }\n  .dropdown-menu {\n    left: auto;\n    right: 100%;\n    margin-left: 0;\n    margin-right: -1px;\n    .border-radius(6px 0 6px 6px);\n  }\n}\n\n\n// Inverted navbar\n// -------------------------\n\n.navbar-inverse {\n\n  .navbar-inner {\n    #gradient > .vertical(@navbarInverseBackgroundHighlight, @navbarInverseBackground);\n    border-color: @navbarInverseBorder;\n  }\n\n  .brand,\n  .nav > li > a {\n    color: @navbarInverseLinkColor;\n    text-shadow: 0 -1px 0 rgba(0,0,0,.25);\n    &:hover {\n      color: @navbarInverseLinkColorHover;\n    }\n  }\n\n  .brand {\n    color: @navbarInverseBrandColor;\n  }\n\n  .navbar-text {\n    color: @navbarInverseText;\n  }\n\n  .nav > li > a:focus,\n  .nav > li > a:hover {\n    background-color: @navbarInverseLinkBackgroundHover;\n    color: @navbarInverseLinkColorHover;\n  }\n\n  .nav .active > a,\n  .nav .active > a:hover,\n  .nav .active > a:focus {\n    color: @navbarInverseLinkColorActive;\n    background-color: @navbarInverseLinkBackgroundActive;\n  }\n\n  // Inline text links\n  .navbar-link {\n    color: @navbarInverseLinkColor;\n    &:hover {\n      color: @navbarInverseLinkColorHover;\n    }\n  }\n\n  // Dividers in navbar\n  .divider-vertical {\n    border-left-color: @navbarInverseBackground;\n    border-right-color: @navbarInverseBackgroundHighlight;\n  }\n\n  // Dropdowns\n  .nav li.dropdown.open > .dropdown-toggle,\n  .nav li.dropdown.active > .dropdown-toggle,\n  .nav li.dropdown.open.active > .dropdown-toggle {\n    background-color: @navbarInverseLinkBackgroundActive;\n    color: @navbarInverseLinkColorActive;\n  }\n  .nav li.dropdown > a:hover .caret {\n    border-top-color: @navbarInverseLinkColorActive;\n    border-bottom-color: @navbarInverseLinkColorActive;\n  }\n  .nav li.dropdown > .dropdown-toggle .caret {\n    border-top-color: @navbarInverseLinkColor;\n    border-bottom-color: @navbarInverseLinkColor;\n  }\n  .nav li.dropdown.open > .dropdown-toggle .caret,\n  .nav li.dropdown.active > .dropdown-toggle .caret,\n  .nav li.dropdown.open.active > .dropdown-toggle .caret {\n    border-top-color: @navbarInverseLinkColorActive;\n    border-bottom-color: @navbarInverseLinkColorActive;\n  }\n\n  // Navbar search\n  .navbar-search {\n    .search-query {\n      color: @white;\n      background-color: @navbarInverseSearchBackground;\n      border-color: @navbarInverseSearchBorder;\n      .box-shadow(~\"inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15)\");\n      .transition(none);\n      .placeholder(@navbarInverseSearchPlaceholderColor);\n\n      // Focus states (we use .focused since IE7-8 and down doesn't support :focus)\n      &:focus,\n      &.focused {\n        padding: 5px 15px;\n        color: @grayDark;\n        text-shadow: 0 1px 0 @white;\n        background-color: @navbarInverseSearchBackgroundFocus;\n        border: 0;\n        .box-shadow(0 0 3px rgba(0,0,0,.15));\n        outline: 0;\n      }\n    }\n  }\n\n  // Navbar collapse button\n  .btn-navbar {\n    .buttonBackground(darken(@navbarInverseBackgroundHighlight, 5%), darken(@navbarInverseBackground, 5%));\n  }\n\n}\n",
 			"file": "pre-compiled/less/navbar.less",
-			"file_size": 11823,
-			"file_write_time": 1360607655000000,
 			"settings":
 			{
 				"buffer_size": 11789,
@@ -79,10 +68,18 @@
 			}
 		},
 		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 2670,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "pre-compiled/less/custom.less",
 			"settings":
 			{
-				"buffer_size": 2633,
+				"buffer_size": 2641,
 				"line_ending": "Unix"
 			}
 		},
@@ -98,7 +95,7 @@
 			"file": "content/contact.mkd",
 			"settings":
 			{
-				"buffer_size": 802,
+				"buffer_size": 3040,
 				"line_ending": "Unix"
 			}
 		},
@@ -171,6 +168,7 @@
 	},
 	"file_history":
 	[
+		"/Users/dmbaughman/Sites/wildpines/templates/contact.html",
 		"/Users/dmbaughman/Sites/wildpines/pre-compiled/less/navbar.less",
 		"/Users/dmbaughman/Sites/wildpines/.gitignore",
 		"/Users/dmbaughman/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
@@ -222,6 +220,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"h3",
 			"bars",
 			"h5",
 			"h3",
@@ -353,7 +352,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -361,42 +360,15 @@
 					"file": "templates/base.html",
 					"settings":
 					{
-						"buffer_size": 3195,
+						"buffer_size": 3646,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1446,
-								1169
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 281.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "templates/home.html",
-					"settings":
-					{
-						"buffer_size": 1762,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1502,
-								1488
+								1257,
+								1257
 							]
 						],
 						"settings":
@@ -406,6 +378,33 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "templates/home.html",
+					"settings":
+					{
+						"buffer_size": 1701,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1467,
+								1467
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 98.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -441,15 +440,15 @@
 					"file": "content/about.mkd",
 					"settings":
 					{
-						"buffer_size": 2884,
+						"buffer_size": 2939,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1572,
-								1572
+								1468,
+								1468
 							]
 						],
 						"settings":
@@ -469,15 +468,15 @@
 					"file": "content/forms.mkd",
 					"settings":
 					{
-						"buffer_size": 1306,
+						"buffer_size": 1316,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								71,
-								71
+								1290,
+								1290
 							]
 						],
 						"settings":
@@ -494,44 +493,18 @@
 				},
 				{
 					"buffer": 5,
-					"file": "templates/contact.html",
-					"settings":
-					{
-						"buffer_size": 150,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								150,
-								150
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
 					"file": "content/services.mkd",
 					"settings":
 					{
-						"buffer_size": 991,
+						"buffer_size": 1104,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								985,
-								985
+								145,
+								145
 							]
 						],
 						"settings":
@@ -547,7 +520,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "pre-compiled/less/navbar.less",
 					"settings":
 					{
@@ -569,7 +542,33 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3801.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "README.md",
+					"settings":
+					{
+						"buffer_size": 2670,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1449,
+								1449
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -577,6 +576,7 @@
 			]
 		},
 		{
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -584,15 +584,15 @@
 					"file": "pre-compiled/less/custom.less",
 					"settings":
 					{
-						"buffer_size": 2633,
+						"buffer_size": 2641,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1398,
-								1165
+								217,
+								217
 							]
 						],
 						"settings":
@@ -601,7 +601,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 848.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -639,15 +639,15 @@
 					"file": "content/contact.mkd",
 					"settings":
 					{
-						"buffer_size": 802,
+						"buffer_size": 3040,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								638,
-								638
+								2944,
+								2944
 							]
 						],
 						"settings":

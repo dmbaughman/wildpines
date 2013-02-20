@@ -38,3 +38,25 @@ icon: 'tent-32.png'
         </div>
     </div>
 </div>
+<br>
+<br>
+<h4>Credentials</h4>
+<hr> 
+<div class="row-fluid">
+    <div class="span6">
+        <h5>Certified Therapeutic Recreation Specialist</h5>
+        <p>Certified by the National Council for Therapeutic Recreation Certification.</p>
+        <br>
+        <h5>Recreational Therapist</h5>
+        <p>Credentialed by the Washington State Department of Health.</p>
+        <br>
+    </div>
+    <div class="span6">
+        <h5>Challenge Course Facilitator, level 2</h5>
+        <p>Issued by the Accommodation for Challenge Course Technology.</p>
+        <br>
+        <h5>Mental Health Counselor, Associate</h5>
+        <p>Currently under supervision by a fully licensed mental health professional, full Mental Health Counselor license is pending with the state.</p>
+        <br>
+    </div>
+</div>
